@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.thumbs-swiper .swiper-slide img {
+  filter: brightness(0.6);
+  transition: filter 0.3s ease;
+  border-radius: 10px;
+  
+}
+
+.thumbs-swiper .swiper-slide-thumb-active img {
+  filter: brightness(1);
+  border: 2px solid #f59e0b;
+}
