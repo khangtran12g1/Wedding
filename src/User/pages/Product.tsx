@@ -126,7 +126,7 @@ function Product() {
             <div className="flex items-center gap-7">
                 <img src={cnhu} className="w-16 h-auto"/>
                 <div className="flex flex-col">
-                    <p className="font-bold">C.Như</p>
+                    <p className="font-bold">C.Vôn</p>
                     <p className="flex items-center">
                         <a>📞0967784511</a>
                         &nbsp;-&nbsp;
@@ -139,7 +139,7 @@ function Product() {
             <div className="flex items-center gap-7">
                 <img src={atrieu} className="w-16 h-auto"/>
                 <div className="flex flex-col">
-                    <p className="font-bold">A.Triều</p>
+                    <p className="font-bold">A.Khang</p>
                     <p className="flex items-center">
                         <a href="">📞0967784511</a>
                         &nbsp;-&nbsp;
