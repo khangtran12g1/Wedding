@@ -160,7 +160,7 @@ function Product() {
                     <button className="text-white hover:text-black">Gửi</button>
                 </div>
             </div>
-            <div className="flex ">
+            <div className="flex items-center">
                 <button
                     onClick={decrease}
                     className="w-10 h-10 rounded bg-gray-200 text-xl hover:bg-gray-300"
@@ -171,6 +171,7 @@ function Product() {
                 <input
                     type="number"
                     value={quantity}
+                    readOnly
                     className="w-16 h-10 text-center border border-gray-300 rounded"
                 />
 
@@ -180,6 +181,33 @@ function Product() {
                 >
                     +
                 </button>
+                <button
+                    className="flex items-center gap-2  bg-red-600 text-white rounded hover:bg-red-700 ml-4"
+                    >
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        className="w-5 h-5"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                    >
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13l-1.5 6h13M7 13L5.4 5M16 21a1 1 0 100-2 1 1 0 000 2zm-8 0a1 1 0 100-2 1 1 0 000 2z" />
+                    </svg>
+                    Thêm vào giỏ
+                </button>
+                <button
+                    className="flex items-center gap-2 px-4 py-2 bg-yellow-400 text-white rounded hover:bg-yellow-700 ml-4"
+                    >
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        className="w-6 h-6 text-white fill-current"
+                        >
+                        <path d="M13 2L3 14h7v8l10-12h-7z" />
+                    </svg>
+                    Đặt ngay
+                </button>
+
             </div>
           </div>
           

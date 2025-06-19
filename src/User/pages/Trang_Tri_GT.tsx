@@ -36,7 +36,7 @@ function TrangTriGt() {
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 px-24 mb-8">
         <div className="flex flex-col border-2 border-yellow-200 items-center pb-5">
-            <Link to="/" className="w-full aspect-square">
+            <Link to="/product" className="w-full aspect-square">
                 <img src={sss}  className="object-cover w-full h-full"/>
             </Link>
             <p className="text-center mt-3">Trang Trí Gia Tiên Tông Trắng Vàng Tiffany – Sang Trọng, Đúng Nghi Lễ</p>
@@ -60,7 +60,7 @@ function TrangTriGt() {
                 <p className="text-red-600"> Hỗ trợ: 2 đĩa 3 tần cao cấp </p>
             </div>
 
-            <Link to="/" className="flex border rounded-lg bg-red-600 p-2 justify-center items-center mt-3">
+            <Link to="/product" className="flex border rounded-lg bg-red-600 p-2 justify-center items-center mt-3">
                 <p className="text-white">Xem chi tiết mẫu</p>
                 <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 inline-block ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />

@@ -41,7 +41,7 @@ function Header() {
           </div>
 
           <nav className="space-x-4">
-            <Link to="/" className="text-lg hover:text-pink-600 font-bold">
+            <Link to="/home" className="text-lg hover:text-pink-600 font-bold">
               Trang chủ
             </Link>
             <div className="group relative inline-block">
@@ -52,12 +52,12 @@ function Header() {
                 </svg>
               </div>
               <ul className="absolute left-0 top-full z-50 hidden whitespace-nowrap border bg-[#f1e256] shadow-md group-hover:block px-5">
-                <li><a href="#" className="block px-4 py-2 hover:text-gray-100">Trang Trí Gia Tiên</a><div className=" border-t border-white"></div></li>
-                <li><a href="#" className="block px-4 py-2 hover:text-gray-100">Mâm Quả Trọn Gói</a><div className=" border-t border-white"></div></li>
-                <li><a href="#" className="block px-4 py-2 hover:text-gray-100">Lễ Vật Giạm Ngõ</a><div className=" border-t border-white"></div></li>
-                <li><a href="#" className="block px-4 py-2 hover:text-gray-100">Long Phụng-Trái Cây</a><div className=" border-t border-white"></div></li>
-                <li><a href="#" className="block px-4 py-2 hover:text-gray-100">Cổng Hoa Cưới</a><div className=" border-t border-white"></div></li>
-                <li><a href="#" className="block px-4 py-2 hover:text-gray-100">Lễ Tân-Bê Quả Cưới</a><div className=" border-t border-white"></div></li>
+                <li><Link to={"/trangtrigt"} className="block px-4 py-2 hover:text-gray-100">Trang Trí Gia Tiên</Link><div className=" border-t border-white"></div></li>
+                <li><Link to={"/trangtraigt"} className="block px-4 py-2 hover:text-gray-100">Mâm Quả Trọn Gói</Link><div className=" border-t border-white"></div></li>
+                <li><Link to={"/trangtraigt"} className="block px-4 py-2 hover:text-gray-100">Lễ Vật Giạm Ngõ</Link><div className=" border-t border-white"></div></li>
+                <li><Link to={"/trangtraigt"} className="block px-4 py-2 hover:text-gray-100">Long Phụng-Trái Cây</Link><div className=" border-t border-white"></div></li>
+                <li><Link to={"/trangtraigt"} className="block px-4 py-2 hover:text-gray-100">Cổng Hoa Cưới</Link><div className=" border-t border-white"></div></li>
+                <li><Link to={"/trangtraigt"} className="block px-4 py-2 hover:text-gray-100">Lễ Tân-Bê Quả Cưới</Link><div className=" border-t border-white"></div></li>
               </ul>
             </div>
             <Link to="/about" className="text-lg hover:text-pink-600 font-bold">
