@@ -13,3 +13,36 @@
   filter: brightness(1);
   border: 2px solid #f59e0b;
 }
+
+
+@layer components {
+  .editor-output-describe h1,
+  .editor-output-describe h2,
+  .editor-output-describe h3 {
+    @apply flex items-center gap-2 text-[1.6em] font-bold;
+  }
+
+  .editor-output-describe ul,
+  .editor-output-describe ol {
+    @apply ml-[1.3em] text-lg [&>li]:mb-4;
+  }
+
+
+  .editor-output-describe p {
+    @apply text-lg;
+  }
+
+
+  .editor-output-category ul {
+    @apply text-gray-700 text-lg font-timesnewroman list-disc list-inside space-y-1;
+  }
+  .editor-output-category ol {
+    @apply text-gray-700 text-lg font-timesnewroman list-decimal list-inside space-y-1;
+  }
+  .editor-output-category h1,
+  .editor-output-category h2,
+  .editor-output-category h3,
+  .editor-output-category h4 {
+    @apply text-lg font-medium flex items-center gap-3;
+  }
+}

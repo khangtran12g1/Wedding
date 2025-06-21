@@ -14,6 +14,8 @@ import 'swiper/css/thumbs';
 import 'swiper/css/free-mode';
 import 'swiper/css/navigation'
 
+import { Editor } from "@tinymce/tinymce-react";
+import { useRef} from "react";
 
 const images = [
   xehoa,
@@ -31,6 +33,16 @@ function Product() {
 
     const increase = () => setQuantity((q) => q + 1);
     const decrease = () => setQuantity((q) => Math.max(1, q - 1));
+
+    const editorRef = useRef<any>(null);
+    const [savedContent, setSavedContent] = useState("");
+    
+    const handleSave = () => {
+        if (editorRef.current) {
+          const content = editorRef.current.getContent();
+          setSavedContent(content);
+        }
+      };
 
 
   return (
@@ -112,16 +124,16 @@ function Product() {
                     <li>Thiết kế bảng tên cô dâu và chú rể</li>
                 </ul>
             </div>
-            <div className="w-full border-gray-400 border-t"></div>
+            <hr/>
             <div className="flex flex-col [&>h2]:text-lg font-medium gap-3 ">
                 <h2>HỖ TRỢ THÊM:</h2>
-                <ul className="ist-inside space-y-1 text-gray-700 text-lg font-timesnewroman" >
+                <ul className="list-disc list-inside space-y-1 text-gray-700 text-lg font-timesnewroman" >
                     <li><span className="text-red-500">Tặng:&nbsp;</span>12 chai nước suối in tên</li>
                     <li><span className="text-red-500">Tặng:&nbsp;</span>10 bông cài áo</li>
                     <li><span className="text-red-500">Tặng:&nbsp;</span>2 đĩa 3 tần cao cấp</li>
                 </ul>
             </div>
-            <div className="w-full border-gray-400 border-t"></div>
+            <hr/>
             <p className="text-lg font-timesnewroman">Hãy để Cưới Hỏi Phu Thê có cơ hội được phục vụ bạn</p>
             <div className="flex items-center gap-7">
                 <img src={cnhu} className="w-16 h-auto"/>
@@ -250,7 +262,7 @@ function Product() {
             <hr/>
             <h2 className="text-[1.6em] flex items-center font-bold gap-2">
                 <img draggable="false" className="w-[1em] h-[1em]" src="https://s.w.org/images/core/emoji/15.1.0/svg/1f381.svg"/>
-                Hạng Mục Trang Trí Gia Tiên Bao Gồm:
+                Hỗ Trợ & Khuyến Mãi Kèm Theo:
             </h2>
             <ul className="list-disc text-lg font-timesnewroman ml-[1.3em] [&>li]:mb-4">
                 <li><p>2 kệ 3 tầng bày lễ vật hoặc bánh trái.</p></li>
@@ -274,16 +286,49 @@ function Product() {
         </div>
         {/* Ảnh mô tả */}
         
-        <div className="flex flex-col items-center">
+        {/* <div className="flex flex-col items-center">
             <h2 className="text-2xl font-bold font-timesnewroman m-5">Hình ảnh thực tế tại Phuthewedding</h2>
              {images.map((image,index)=>(
                 <div key={index} className="w-full h-full  aspect-[16/9] my-3 xl:w-9/12 ">
                     <img src={image} alt={"img "+ {index}} className=" w-full h-full object-cover border rounded-3xl"/>
                 </div>
              ))}              
-        </div>
+        </div> */}
         
+        {/* test editor */}
+        {/* <div className="flex flex-col editor-output-describe font-timesnewroman gap-4" dangerouslySetInnerHTML={{ __html: savedContent }}>
+        </div>
+        <div className="max-w-4xl">
+        <Editor
+        apiKey="h7e10mq3w5ylwea2i2cwdefnjksknfi86dccadw99t4qg3bo"
+        onInit={(_, editor) => (editorRef.current = editor)}
+        init={{
+          height: 500,
+          plugins: [
+            // Core plugins
+            "anchor", "autolink", "charmap", "codesample", "emoticons", "image", "link", "lists", "media", "searchreplace", "table", "visualblocks", "wordcount",
+            "checklist", "mediaembed", "casechange", "formatpainter", "pageembed", "a11ychecker", "tinymcespellchecker", "permanentpen", "powerpaste", "advtable", "advcode", "editimage", "advtemplate", "mentions", "tinycomments", "tableofcontents", "footnotes", "mergetags", "autocorrect", "typography", "inlinecss", "markdown", "importword", "exportword", "exportpdf"
+          ],
+          toolbar:
+            "undo redo | blocks fontfamily fontsize | bold italic underline emoticons numlist bullist image hr| link media table mergetags | addcomment showcomments | spellcheckdialog a11ycheck typography | align lineheight | indent outdent | charmap | removeformat",
+          tinycomments_mode: "embedded",
+          tinycomments_author: "Author name",
+          mergetags_list: [
+            { value: "First.Name", title: "First Name" },
+            { value: "Email", title: "Email" },
+            ],
+            }}
+        />
+            <button
+                onClick={handleSave}
+                className="mt-4 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
+            >
+            Lưu nội dung
+        </button>
+        </div> */}
+
       </div>
+      
     </>
   );
 }
