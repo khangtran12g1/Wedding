@@ -42,7 +42,7 @@ function Product() {
           <h2>Trang Trí Cưới Hỏi</h2>
         </div>
         <div className="md: grid grid-cols-1 md:grid-cols-2">
-
+        {/* Phần ảnh */}
           <div className="px-4 md:sticky top-20 h-fit gap-4">
             <Swiper
                 spaceBetween={10}
@@ -79,7 +79,7 @@ function Product() {
                     </Swiper>
                 </div>
             </div>
-
+            {/* Bên phải phần ảnh */}
           <div className="px-4 flex flex-col gap-4">
             <h2 className="text-3xl  font-medium">Trang Trí Gia Tiên Màu Trắng Xanh Mint Tiffany – Không Gian Cưới Tinh Tế, Đẳng Cấp</h2>
             <div className="flex text-2xl  font-medium">
@@ -163,27 +163,19 @@ function Product() {
             <div className="flex items-center">
                 <button
                     onClick={decrease}
-                    className="w-10 h-10 rounded bg-gray-200 text-xl hover:bg-gray-300"
-                >
-                    –
-                </button>
+                    className="w-10 h-10 rounded bg-gray-200 text-xl hover:bg-gray-300"> – </button>
 
                 <input
-                    type="number"
-                    value={quantity}
-                    readOnly
+                    type="number" value={quantity} readOnly
                     className="w-16 h-10 text-center border border-gray-300 rounded"
                 />
 
                 <button
                     onClick={increase}
-                    className="w-10 h-10 rounded bg-gray-200 text-xl hover:bg-gray-300"
-                >
-                    +
-                </button>
+                    className="w-10 h-10 rounded bg-gray-200 text-xl hover:bg-gray-300"> + </button>
+
                 <button
-                    className="flex items-center gap-2 py-2 px-4 bg-red-600 text-white rounded hover:bg-red-700 ml-4"
-                    >
+                    className="flex items-center gap-2 py-2 px-4 bg-red-600 text-white rounded hover:bg-red-700 ml-4">
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
                         className="w-5 h-5"
@@ -195,6 +187,7 @@ function Product() {
                     </svg>
                     Thêm vào giỏ
                 </button>
+
                 <button
                     className="flex items-center gap-2 px-4 py-2 bg-yellow-400 text-white rounded hover:bg-yellow-700 ml-4"
                     >
@@ -212,6 +205,84 @@ function Product() {
           </div>
           
         </div>
+
+        <div className="border-gray-300 w-full border-b px-4 py-4"></div>
+        {/* Mô tả */}
+        <div className="flex flex-col gap-4 font-timesnewroman [&>p]:text-lg">
+            <div className="inline-flex w-fit items-center gap-3 px-4 py-2 font-timesnewroman text-2xl text-red-500 border rounded-md font-bold mt-5">
+                MÔ TẢ
+                <svg
+                    className="w-6 h-6 text-gray-500"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth={2}
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                    >
+                    <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M8 16h8M8 12h8m-8-4h8M4 6h16a2 2 0 012 2v12a2 2 0 01-2 2H4a2 2 0 01-2-2V8a2 2 0 012-2z"
+                    />
+                </svg>
+            </div>
+            <h2 className="text-[1.6em] flex items-center font-bold gap-2">
+                <img draggable="false" className="w-[1em] h-[1em]" src="https://s.w.org/images/core/emoji/15.1.0/svg/1f4cc.svg"/>
+                Dịch Vụ Trang Trí Gia Tiên Đám Cưới Tại Nhà – Phu Thê Wedding
+            </h2>
+            <p><strong>Trang trí gia tiên đám cưới </strong>là nghi thức quan trọng, không thể thiếu trong mỗi lễ cưới – lễ hỏi của người Việt. Đây là nơi bày tỏ lòng thành kính với tổ tiên và là không gian chứng kiến những nghi thức thiêng liêng của cô dâu – chú rể.</p>
+            <p><strong>Phu Thê Wedding</strong> mang đến dịch vụ <strong>trang trí gia tiên</strong> tại nhà trọn gói, thiết kế sang trọng, trang nhã và đúng chuẩn phong tục truyền thống.</p>
+            <hr></hr>
+            <h2 className="text-[1.6em] flex items-center font-bold gap-2">
+                <img draggable="false" className="w-[1em] h-[1em]" src="https://s.w.org/images/core/emoji/15.1.0/svg/1f380.svg"/>
+                Hạng Mục Trang Trí Gia Tiên Bao Gồm:
+            </h2>
+            <ol className="list-decimal ml-[1.3em] text-lg [&>li]:mb-4">
+                <li><p>Phong màn voan vải lụa cao cấp, trang trí chữ Hỷ và hoa lụa.</p></li>
+                <li><p>Bàn thờ gia tiên phủ vải ren đẹp, trang trí bộ lư đồng (gồm bộ đỉnh, hai chân đèn và bát nhang)..</p></li>
+                <li><p>Bàn để mâm quả phủ ren đồng bộ, bày được 6 quả theo đúng nghi lễ.</p></li>
+                <li><p>Bàn tiếp hai họ dài 2m4, phủ vải ren cao cấp, sắp xếp 12 ghế (mỗi bên 6 ghế).</p></li>
+                <li><p>Bộ ấm trà gồm 2 bình, 12 tách và 14 đĩa nhỏ dùng trong nghi lễ mời trầu – mời nước.</p></li>
+                <li><p>Hai bình hoa lụa cao cấp, phối màu theo tông chủ đạo hoặc theo ý thích.</p></li>
+                <li><p>Bảng tên cô dâu – chú rể in trên bảng cứng đẹp mắt, đặt tại khu vực bàn thờ hoặc cổng hoa.</p></li>
+                <li><p>Cổng hoa lụa cao cấp, treo bảng chữ “Tân Hôn” hoặc “Vu Quy”.</p></li>
+            </ol>
+            <hr/>
+            <h2 className="text-[1.6em] flex items-center font-bold gap-2">
+                <img draggable="false" className="w-[1em] h-[1em]" src="https://s.w.org/images/core/emoji/15.1.0/svg/1f381.svg"/>
+                Hạng Mục Trang Trí Gia Tiên Bao Gồm:
+            </h2>
+            <ul className="list-disc text-lg font-timesnewroman ml-[1.3em] [&>li]:mb-4">
+                <li><p>2 kệ 3 tầng bày lễ vật hoặc bánh trái.</p></li>
+                <li><p>Đèn nháy trang trí cho không gian thêm lung linh.</p></li>
+                <li><p>12 chai nước suối in tên cô dâu – chú rể tặng khách.</p></li>
+                <li><p>12 hoa cài áo cho họ hàng hai bên.</p></li>
+            </ul>
+            <hr/>
+            <h2 className="text-[1.6em] flex items-center font-bold gap-2">
+                <img draggable="false" className="w-[1em] h-[1em]" src="https://s.w.org/images/core/emoji/15.1.0/svg/2728.svg"/>
+                Hạng Mục Trang Trí Gia Tiên Bao Gồm:
+            </h2>
+            <p>Ngoài gói cơ bản, Phu Thê Wedding nhận thiết kế theo ý tưởng hoặc mẫu có sẵn của khách:</p>
+            <ul className="list-disc text-lg font-timesnewroman ml-[1.3em] [&>li]:mb-4">
+                <li><p>Thay đổi màu sắc, kiểu dáng cổng hoa, bàn thờ.</p></li>
+                <li><p>Trang trí thêm rạp cưới, sân khấu, bàn gallery, cầu thang, lối đi.</p></li>
+                <li><p>Nhận thi công trọn gói tại nhà đúng chuẩn lễ nghi truyền thống.</p></li>
+            </ul>
+            <p><img className="w-[1em] h-[1em] float-left mr-1 mt-1" src="https://s.w.org/images/core/emoji/15.1.0/svg/1f699.svg"/> Chúng tôi chuyên cung cấp dịch vụ cưới hỏi trọn gói tại TP.HCM, sẵn sàng phục vụ tất cả các quận như: Quận 1, Quận 3, Quận 5, Quận 7, Quận 10, Bình Thạnh, Gò Vấp, Tân Bình, Tân Phú, Phú Nhuận, Thủ Đức, Bình Tân, Hóc Môn, Nhà Bè, Quận 12, và các khu vực lân cận.</p>
+            <p>Dù bạn ở trung tâm hay vùng ven, đội ngũ của chúng tôi luôn sẵn sàng hỗ trợ tận nơi, đảm bảo uy tín – chuyên nghiệp – đúng giờ.</p>
+        </div>
+        {/* Ảnh mô tả */}
+        
+        <div className="flex flex-col items-center">
+            <h2 className="text-2xl font-bold font-timesnewroman m-5">Hình ảnh thực tế tại Phuthewedding</h2>
+             {images.map((image,index)=>(
+                <div key={index} className="w-full h-full  aspect-[16/9] my-3 xl:w-9/12 ">
+                    <img src={image} alt={"img "+ {index}} className=" w-full h-full object-cover border rounded-3xl"/>
+                </div>
+             ))}              
+        </div>
+        
       </div>
     </>
   );
