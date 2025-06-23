@@ -66,9 +66,9 @@ function Header() {
             <Link to="/booking" className="text-lg hover:text-pink-600 font-bold">
               Thư viện ảnh
             </Link>
-            <Link to="/booking" className="text-lg hover:text-pink-600 font-bold">
-              Liên hệ
-            </Link>
+            <Link to="/lien-he" className="text-pink-600 font-bold"> 
+  Liên hệ
+</Link>
           </nav>
         </div>
       </div>

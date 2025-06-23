@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-d
 import Product from "./User/pages/Product";
 import ProductDetail from "./User/pages/ProductDetail";
 import ScrollToTop from "./User/components/ScrollToTop"; // hoặc đúng đường dẫn
-
+import LienHe from "./User/pages/LienHe";
 
 function App() {
   return (
@@ -16,6 +16,7 @@ function App() {
           <Route path="/product" element={< ProductDetail/>} />
           <Route path="/trangtrigt" element={< Product/>} />
           <Route path="/home" element={< Home/>} />
+          <Route path="/lien-he" element={<LienHe />} />
         </Routes>
       </Layout>
     </Router>
