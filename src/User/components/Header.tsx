@@ -53,7 +53,7 @@ function Header() {
               </div>
               <ul className="absolute left-0 top-full z-50 hidden whitespace-nowrap border bg-[#f1e256] shadow-md group-hover:block px-5">
                 <li><Link to={"/trangtrigt"} className="block px-4 py-2 hover:text-gray-100">Trang Trí Gia Tiên</Link><div className=" border-t border-white"></div></li>
-                <li><Link to={"/trangtraigt"} className="block px-4 py-2 hover:text-gray-100">Mâm Quả Trọn Gói</Link><div className=" border-t border-white"></div></li>
+                <li><Link to={"/mamqua"} className="block px-4 py-2 hover:text-gray-100">Mâm Quả Trọn Gói</Link><div className=" border-t border-white"></div></li>
                 <li><Link to={"/trangtraigt"} className="block px-4 py-2 hover:text-gray-100">Lễ Vật Giạm Ngõ</Link><div className=" border-t border-white"></div></li>
                 <li><Link to={"/trangtraigt"} className="block px-4 py-2 hover:text-gray-100">Long Phụng-Trái Cây</Link><div className=" border-t border-white"></div></li>
                 <li><Link to={"/trangtraigt"} className="block px-4 py-2 hover:text-gray-100">Cổng Hoa Cưới</Link><div className=" border-t border-white"></div></li>
