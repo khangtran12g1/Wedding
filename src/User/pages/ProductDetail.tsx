@@ -296,7 +296,7 @@ function Product() {
         </div> */}
         
         {/* test editor */}
-        {/* <div className="flex flex-col editor-output-describe font-timesnewroman gap-4" dangerouslySetInnerHTML={{ __html: savedContent }}>
+        <div className="flex flex-col editor-output-describe font-timesnewroman gap-4" dangerouslySetInnerHTML={{ __html: savedContent }}>
         </div>
         <div className="max-w-4xl">
         <Editor
@@ -325,7 +325,7 @@ function Product() {
             >
             Lưu nội dung
         </button>
-        </div> */}
+        </div>
 
       </div>
       

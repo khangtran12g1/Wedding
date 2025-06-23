@@ -1,9 +1,10 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import sss from "../image/DSC04213.jpg";
 import { Link } from "react-router-dom";
 import { FaCheckSquare } from "react-icons/fa";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { Editor } from "@tinymce/tinymce-react";
 
 const moTaGoi = {
   1: "Đầy đủ nghi lễ, đúng chuẩn phong tục ông bà",
@@ -16,19 +17,28 @@ function TrangTriGt() {
 
     const handleSelect = (number : number) => {
     setSelected(number);
-    
-    useEffect(() => {
-        AOS.init({ duration: 2000, once: true });
-      }, []);
-    
   };
+
+  useEffect(() => {
+        AOS.init({ duration: 2000});
+      }, []);
+
+    const editorRef = useRef<any>(null);
+    const [savedContent, setSavedContent] = useState("");
+    
+    const handleSave = () => {
+        if (editorRef.current) {
+          const content = editorRef.current.getContent();
+          setSavedContent(content);
+        }
+      };
   
   return (
     <>
     <div className=" hidden lg:flex flex-col font-timesnewroman gap-10 py-8 bg-[#edf8fb]">
             <h2 data-aos="fade-up" className="font-bold text-2xl font-timesnewroman text-center">TRANG TRÍ GIANG TIÊN</h2>
             <p data-aos="fade-up" className="text-center text-lg">Hiểu lần đầu là bỡ ngỡ, Cưới hỏi Phu Thê sẽ sát cánh cùng bạn làm nên lần đầu thật trọn vẹn</p>
-            <div className=" grid-cols-2 grid px-24 gap-5 text-lg">
+            <div className=" grid-cols-2 grid px-28 gap-5 text-lg">
                 <p data-aos="fade-left">Lễ dạm ngõ có rất nhiều tên gọi khác nhau tùy theo từng vùng miền như: lễ xem mặt, bỏ trà, đám nói (miền Nam) là một nghi lễ trong phong tục hôn nhân của người Việt.Trong buổi dạm ngõ nhà trai đến nhà gái đặt vấn đề chính thức cho đôi bạn trẻ qua lại với nhau và bàn bạc thêm về ngày tổ chức lễ ăn hỏi và lễ cưới.</p>
                 <img data-aos="fade-right" src={sss} className="w-full"/>
             </div>
@@ -51,7 +61,7 @@ function TrangTriGt() {
 
       <h2 className="text-center text-red-500 my-6 text-base"> {moTaGoi[selected as keyof typeof moTaGoi]}</h2>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 px-24 mb-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:px-24 px-5 mb-8 gap-3">
         <div className="flex flex-col border-2 border-yellow-200 items-center pb-5 font-timesnewroman" >
             <Link to="/ChiTietSanPham" className="w-full aspect-square">
                 <img src={sss}  className="object-cover w-full h-full"/>
@@ -59,8 +69,9 @@ function TrangTriGt() {
             <p className="text-center mt-3">Trang Trí Gia Tiên Tông Trắng Vàng Tiffany – Sang Trọng, Đúng Nghi Lễ</p>
             <p className="text-center text-red-500 font-bold"> Giá: 5.200.000 đ</p>
             <div className="w-11/12 border-t border-blue-400 my-3"></div>
-            <div className="w-full items-start px-3">
-                <ul className="list-decimal list-inside space-y-1 text-gray-700"   >
+            <div className="w-full items-start px-3 [&>h2]:text-lg">
+                <h2 className="text-gray-700">DANH MỤC BAO GỒM</h2>
+                <ol className="list-decimal list-inside space-y-1 text-gray-700"   >
                     <li className="relative ps-6"><FaCheckSquare className="absolute left-0 top-1 text-red-500 w-4 h-4" />Trang trí cổng hoa lụa cao cấp</li>
                     <li className="relative ps-6 "><FaCheckSquare className="absolute left-0 top-1 text-red-500 w-4 h-4" />Trang trí phong màn voan + hoa lụa + chữ hỷ</li>
                     <li className="relative ps-6 "><FaCheckSquare className="absolute left-0 top-1 text-red-500 w-4 h-4" />Trang trí bàn thờ gia tiên + bộ lư đồng</li>
@@ -69,9 +80,11 @@ function TrangTriGt() {
                     <li className="relative ps-6 "><FaCheckSquare className="absolute left-0 top-1 text-red-500 w-4 h-4" />Trang trí 2 bộ ấm tách trà</li>
                     <li className="relative ps-6 "><FaCheckSquare className="absolute left-0 top-1 text-red-500 w-4 h-4" />Trang trí 2 hoa lụa để bàn họ</li>
                     <li className="relative ps-6 "><FaCheckSquare className="absolute left-0 top-1 text-red-500 w-4 h-4" />Thiết kế bảng tên cô dâu và chú rể</li>
-                </ul>
+                </ol>
             </div>
+            <br/>
             <div className="w-9/12 items-center px-7">
+                <h2 className="text-gray-700">HỖ TRỢ THÊM</h2>
                 <p className="text-red-600"> Tặng: 12 chai nước suối in tên </p>
                 <p className="text-red-600"> Tặng: 10 bông cài áo </p>
                 <p className="text-red-600"> Hỗ trợ: 2 đĩa 3 tần cao cấp </p>
@@ -83,6 +96,9 @@ function TrangTriGt() {
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
                 </svg>
             </Link>
+
+            {/* <div className="flex flex-col w-full items-start px-3 editor-output-listProduct gap-3" dangerouslySetInnerHTML={{ __html: savedContent }}>
+        </div> */}
 
         </div>
         <div className="flex flex-col border-2 border-yellow-200 items-center pb-5 font-timesnewroman">
@@ -251,6 +267,37 @@ function TrangTriGt() {
 
         </div>
     </div>
+
+
+        
+        {/* <div className="max-w-4xl">
+        <Editor
+        apiKey="h7e10mq3w5ylwea2i2cwdefnjksknfi86dccadw99t4qg3bo"
+        onInit={(_, editor) => (editorRef.current = editor)}
+        init={{
+          height: 500,
+          plugins: [
+            // Core plugins
+            "anchor", "autolink", "charmap", "codesample", "emoticons", "image", "link", "lists", "media", "searchreplace", "table", "visualblocks", "wordcount",
+            "checklist", "mediaembed", "casechange", "formatpainter", "pageembed", "a11ychecker", "tinymcespellchecker", "permanentpen", "powerpaste", "advtable", "advcode", "editimage", "advtemplate", "mentions", "tinycomments", "tableofcontents", "footnotes", "mergetags", "autocorrect", "typography", "inlinecss", "markdown", "importword", "exportword", "exportpdf"
+          ],
+          toolbar:
+            "undo redo | blocks fontfamily fontsize | bold italic underline emoticons numlist bullist image hr| link media table mergetags | addcomment showcomments | spellcheckdialog a11ycheck typography | align lineheight | indent outdent | charmap | removeformat",
+          tinycomments_mode: "embedded",
+          tinycomments_author: "Author name",
+          mergetags_list: [
+            { value: "First.Name", title: "First Name" },
+            { value: "Email", title: "Email" },
+            ],
+            }}
+        />
+            <button
+                onClick={handleSave}
+                className="mt-4 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
+            >
+            Lưu nội dung
+        </button>
+        </div> */}
         
     </>
   );

@@ -1,9 +1,14 @@
 import logo from "../image/logo_phuthe.png";
 import { Link } from "react-router-dom";
+import { FaMapMarkerAlt,FaPhoneAlt } from "react-icons/fa";
+import { IoMail } from "react-icons/io5";
+
+
+
 function Footer() {
   return (
     <>
-      <footer className="mt-auto bg-[#FFFFA6] py-4 text-center text-sm text-white">
+      <footer className="mt-auto bg-[#FFFFA6] font-timesnewroman py-4 text-center text-sm text-white">
         <div className="md:grid md:grid-cols-4 md:gap-4 md:px-5">
           <div className="flex flex-col items-center justify-start p-4">
             <img src={logo} />
@@ -11,7 +16,7 @@ function Footer() {
               Uy tín chất lượng tạo nên thương hiệu
             </h2>
           </div>
-          <div className="flex flex-col items-start justify-start gap-4 p-4 [&>a]:font-serif [&>a]:text-lg [&>a]:text-gray-600">
+          <div className="flex flex-col items-start justify-start gap-4 p-4 [&>a]:text-lg [&>a]:text-gray-600">
             <h2 className="text-xl font-bold text-black">
               CHĂM SÓC KHÁCH HÀNG
             </h2>
@@ -36,18 +41,21 @@ function Footer() {
               CƯỚI HỎI PHU THÊ
             </h2>
             <a
-              className="hover:text-black"
+              className="flex gap-2 items-start hover:text-black"
               target="_blank"
               href="https://www.google.com/maps/place/Trang+Tr%C3%AD+Gia+Ti%C3%AAn,+C%C6%B0%E1%BB%9Bi+H%E1%BB%8Fi,+M%C3%A2m+Qu%E1%BA%A3+C%C6%B0%E1%BB%9Bi+Tr%E1%BB%8Dn+G%C3%B3i+PhutheWedding/@10.7670402,106.6768357,17z/data=!3m1!4b1!4m6!3m5!1s0x31752f1fa04d475f:0x644046e7a4104eb4!8m2!3d10.7670349!4d106.6794106!16s%2Fg%2F11dxqds7k1?hl=vi&entry=tts"
             >
+              <FaMapMarkerAlt className="w-5 h-5 mt-1"/>
               Địa chỉ: 756 Nguyễn Đình Chiểu – P.1 – Q.3 – TP. Hồ Chí Minh
             </a>
-            <Link className="hover:text-black" to="/">
-              Điện thoại: 090 664 66 92
-            </Link>
-            <Link className="hover:text-black" to="/">
-              Email: letuantrieu1993@gmail.com
-            </Link>
+            <a href="tel:0967784511" className="flex hover:text-black gap-2">
+              <FaPhoneAlt className="w-5 h-5 mt-1" />
+              Điện thoại: 0967784511
+            </a>
+            <a className="flex gap-2 hover:text-black">
+              <IoMail className="w-5 h-5 mt-1" />
+              Email: khangtran12g1@gmail.com
+            </a>
           </div>
           <div className="flex flex-col items-start justify-start gap-4 p-4 [&>a]:font-serif [&>a]:text-base [&>a]:text-gray-600">
             <iframe
