@@ -6,7 +6,7 @@ function Header() {
   const [productName, setProductName] = useState("");
   return (
     
-    <header className=" flex flex-col shadow-lg mb-2">
+    <header className=" flex flex-col shadow-lg mb-2 font-timesnewroman">
       <div className="flex flex-col md:flex-row items-center bg-white px-4 md:px-20 py-2 gap-2">
         <div className="w-1/2">
           <img src={logo} alt="Logo" className="w-56" />
@@ -52,15 +52,15 @@ function Header() {
                 </svg>
               </div>
               <ul className="absolute left-0 top-full z-50 hidden whitespace-nowrap border bg-[#f1e256] shadow-md group-hover:block px-5">
-                <li><Link to={"/trangtrigt"} className="block px-4 py-2 hover:text-gray-100">Trang Trí Gia Tiên</Link><div className=" border-t border-white"></div></li>
-                <li><Link to={"/mamqua"} className="block px-4 py-2 hover:text-gray-100">Mâm Quả Trọn Gói</Link><div className=" border-t border-white"></div></li>
-                <li><Link to={"/trangtraigt"} className="block px-4 py-2 hover:text-gray-100">Lễ Vật Giạm Ngõ</Link><div className=" border-t border-white"></div></li>
-                <li><Link to={"/trangtraigt"} className="block px-4 py-2 hover:text-gray-100">Long Phụng-Trái Cây</Link><div className=" border-t border-white"></div></li>
-                <li><Link to={"/trangtraigt"} className="block px-4 py-2 hover:text-gray-100">Cổng Hoa Cưới</Link><div className=" border-t border-white"></div></li>
-                <li><Link to={"/trangtraigt"} className="block px-4 py-2 hover:text-gray-100">Lễ Tân-Bê Quả Cưới</Link><div className=" border-t border-white"></div></li>
+                <li><Link to={"/DanhSachSanPham"} className="block px-4 py-2 hover:text-gray-100">Trang Trí Gia Tiên</Link><div className=" border-t border-white"></div></li>
+                <li><Link to={"/DanhSachSanPham"} className="block px-4 py-2 hover:text-gray-100">Mâm Quả Trọn Gói</Link><div className=" border-t border-white"></div></li>
+                <li><Link to={"/DanhSachSanPham"} className="block px-4 py-2 hover:text-gray-100">Lễ Vật Giạm Ngõ</Link><div className=" border-t border-white"></div></li>
+                <li><Link to={"/DanhSachSanPham"} className="block px-4 py-2 hover:text-gray-100">Long Phụng-Trái Cây</Link><div className=" border-t border-white"></div></li>
+                <li><Link to={"/DanhSachSanPham"} className="block px-4 py-2 hover:text-gray-100">Cổng Hoa Cưới</Link><div className=" border-t border-white"></div></li>
+                <li><Link to={"/DanhSachSanPham"} className="block px-4 py-2 hover:text-gray-100">Lễ Tân-Bê Quả Cưới</Link><div className=" border-t border-white"></div></li>
               </ul>
             </div>
-            <Link to="/about" className="text-lg hover:text-pink-600 font-bold">
+            <Link to="/GioiThieu" className="text-lg hover:text-pink-600 font-bold">
               Giới thiệu
             </Link>
             <Link to="/booking" className="text-lg hover:text-pink-600 font-bold">

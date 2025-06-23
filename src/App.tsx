@@ -3,6 +3,7 @@ import Home from "./User/pages/Home";
 import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 import Product from "./User/pages/Product";
 import ProductDetail from "./User/pages/ProductDetail";
+import Introduce from "./User/pages/introduce";
 import ScrollToTop from "./User/components/ScrollToTop"; // hoặc đúng đường dẫn
 
 
@@ -13,8 +14,9 @@ function App() {
       <Layout>
         <Routes>
           <Route path="/" element={<Navigate to="/home" />} />
-          <Route path="/product" element={< ProductDetail/>} />
-          <Route path="/trangtrigt" element={< Product/>} />
+          <Route path="/ChiTietSanPham" element={< ProductDetail/>} />
+          <Route path="/DanhSachSanPham" element={< Product/>} />
+          <Route path="/GioiThieu" element={< Introduce/>} />
           <Route path="/home" element={< Home/>} />
         </Routes>
       </Layout>

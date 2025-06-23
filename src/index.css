@@ -45,4 +45,33 @@
   .editor-output-category h4 {
     @apply text-lg font-medium flex items-center gap-3;
   }
+
+  .editor-output-introduce h1,
+  .editor-output-introduce h2,
+  .editor-output-introduce h3,
+  .editor-output-introduce h4
+    {
+    @apply font-timesnewroman flex items-center
+  }
+  .editor-output-introduce p{
+    @apply font-timesnewroman text-lg
+  }
+  .editor-output-introduce h1{
+    @apply text-3xl
+  }
+  .editor-output-introduce h2{
+    @apply text-2xl
+  }
+  .editor-output-introduce h3{
+    @apply text-xl
+  }
+  .editor-output-introduce h4{
+    @apply text-lg
+  }
+  .editor-output-introduce h5{
+    @apply text-base
+  }
+  
+
+
 }
