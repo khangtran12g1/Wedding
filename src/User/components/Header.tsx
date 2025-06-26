@@ -1,9 +1,11 @@
 import { Link } from "react-router-dom";
 import logo from "../image/logo.jpg";
 import { useState } from "react";
+import { useCart } from "./CartContext";
 
 function Header() {
   const [productName, setProductName] = useState("");
+  const { cartItems } = useCart();
   return (
     
     <header className=" flex flex-col shadow-lg mb-2 font-timesnewroman">
@@ -28,16 +30,22 @@ function Header() {
             
             <div
               className="flex h-11 w-11 items-center justify-center rounded-full border-2 border-red-500 text-2xl"
-              style={{ boxShadow: "0 0 8px 2px rgba(239, 68, 68, 0.6)" }}
-            >
+              style={{ boxShadow: "0 0 8px 2px rgba(239, 68, 68, 0.6)" }}>
               📞
             </div>
+
             <div>
               <div className="text-xl text-gray-500">Hotline</div>
               <div className="text-xl font-semibold text-red-600">
                 0967 784 511
               </div>
             </div>
+
+            <div className="text-xl">
+              <span >🛒</span>
+              <span>{cartItems.length}</span>
+            </div>
+            
           </div>
 
           <nav className="space-x-4">
@@ -52,18 +60,17 @@ function Header() {
                 </svg>
               </div>
               <ul className="absolute left-0 top-full z-50 hidden whitespace-nowrap border bg-[#f1e256] shadow-md group-hover:block px-5">
-                <li><Link to={"/DanhSachSanPham"} className="block px-4 py-2 hover:text-gray-100">Trang Trí Gia Tiên</Link><div className=" border-t border-white"></div></li>
-                <li><Link to={"/DanhSachSanPham"} className="block px-4 py-2 hover:text-gray-100">Mâm Quả Trọn Gói</Link><div className=" border-t border-white"></div></li>
-                <li><Link to={"/DanhSachSanPham"} className="block px-4 py-2 hover:text-gray-100">Lễ Vật Giạm Ngõ</Link><div className=" border-t border-white"></div></li>
-                <li><Link to={"/DanhSachSanPham"} className="block px-4 py-2 hover:text-gray-100">Long Phụng-Trái Cây</Link><div className=" border-t border-white"></div></li>
-                <li><Link to={"/DanhSachSanPham"} className="block px-4 py-2 hover:text-gray-100">Cổng Hoa Cưới</Link><div className=" border-t border-white"></div></li>
-                <li><Link to={"/DanhSachSanPham"} className="block px-4 py-2 hover:text-gray-100">Lễ Tân-Bê Quả Cưới</Link><div className=" border-t border-white"></div></li>
+                <li><Link to={"/DanhSachSanPham"} className="block px-4 py-2 hover:text-gray-100">Dịch Vụ Cưới Hỏi</Link><div className=" border-t border-white"></div></li>
+                <li><Link to={"/DanhSachSanPham"} className="block px-4 py-2 hover:text-gray-100">Dịch Vụ Cho Thuê Đồ</Link><div className=" border-t border-white"></div></li>
+                <li><Link to={"/DanhSachSanPham"} className="block px-4 py-2 hover:text-gray-100">Dịch Vụ Chụp Hình</Link><div className=" border-t border-white"></div></li>
+                <li><Link to={"/DanhSachSanPham"} className="block px-4 py-2 hover:text-gray-100">Combo Trọn Gói</Link><div className=" border-t border-white"></div></li>
+                <li><Link to={"/DanhSachSanPham"} className="block px-4 py-2 hover:text-gray-100">Sản Phẩm Lẻ</Link><div className=" border-t border-white"></div></li>
               </ul>
             </div>
             <Link to="/GioiThieu" className="text-lg hover:text-pink-600 font-bold">
               Giới thiệu
             </Link>
-            <Link to="/booking" className="text-lg hover:text-pink-600 font-bold">
+            <Link to="/ThuVienAnh" className="text-lg hover:text-pink-600 font-bold">
               Thư viện ảnh
             </Link>
             <Link to="/lien-he" className="text-lg hover:text-pink-600 font-bold"> 

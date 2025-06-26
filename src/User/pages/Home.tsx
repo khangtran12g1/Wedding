@@ -105,49 +105,84 @@ function Home() {
 
     {/* san pham */}
       <div className="flex flex-col items-center justify-center gap-2">
-        <h2 data-aos="fade-up" className="text-xl font-bold text-red-600">
+        <h2 data-aos="fade-up" className="text-3xl font-bold text-red-600">
           SẢN PHẨM CỦA PHUTHEWEDDING 2025
         </h2>
-        <p data-aos="fade-up" className="text-center">
-          Hiểu lần đầu là bỡ ngỡ, Cưới hỏi Phu Thê sẽ sát cánh cùng bạn làm nên
-          lần đầu thật trọn vẹn
-        </p>
-        <div className="grid w-11/12 grid-cols-1 gap-5 px-10 sm:grid-cols-2 md:grid-cols-3">
-          <div data-aos="fade-right" className="flex flex-col items-center justify-center gap-4">
-            <img className="w-full rounded-full border-4 border-yellow-300" src={category_trangtri} />
-            <h2 className="text-xl font-bold hover:text-red-600"> TRANG TRÍ CƯỚI HỎI </h2>
+        <div className="flex flex-col">
+          <h2 data-aos="fade-up" className="text-center text-3xl font-bold font-timesnewroman py-4">Dịch Vụ Cưới Hỏi</h2>
+          <div className="grid w-11/12 mx-auto grid-cols-1 gap-5 px-10 sm:grid-cols-2 md:grid-cols-3 font-timesnewroman">
+            <div data-aos="fade-right" className="flex flex-col items-center justify-center gap-4">
+              <img className="w-full rounded-full border-4 border-yellow-300" src={category_trangtri} />
+              <h2 className="text-lg font-bold hover:text-red-600"> TRANG TRÍ CƯỚI HỎI </h2>
+            </div>
+            <div data-aos="fade-right" className="flex flex-col items-center justify-center gap-4">
+              <img className="w-full rounded-full border-4 border-yellow-300" src={mamqua} />
+              <h2 className="text-lg font-bold hover:text-red-600"> MÂM QUẢ CƯỚI HỎI </h2>
+            </div>
+            <div data-aos="fade-right" className="flex flex-col items-center justify-center gap-4">
+              <img className="w-full rounded-full border-4 border-yellow-300" src={levat} />
+              <h2 className="text-lg font-bold hover:text-red-600"> LỄ VẬT DẠM NGÕ </h2>
+            </div>
+            <div data-aos="fade-right" className="flex flex-col items-center justify-center gap-4">
+              <img className="w-full rounded-full border-4 border-yellow-300" src={conghoa} />
+              <h2 className="text-lg font-bold hover:text-red-600"> CỔNG HOA CƯỚI HỎI </h2>
+            </div>
+            <div data-aos="fade-right" className="flex flex-col items-center justify-center gap-4">
+              <img className="w-full rounded-full border-4 border-yellow-300" src={khungrap} />
+              <h2 className="text-lg font-bold hover:text-red-600"> KHUNG RẠP CƯỚI HỎI </h2>
+            </div>
+            <div data-aos="fade-right" className="flex flex-col items-center justify-center gap-4">
+              <img className="w-full rounded-full border-4 border-yellow-300" src={longphungtraicay} />
+              <h2 className="text-lg font-bold hover:text-red-600"> LONG PHỤNG – TRÁI CÂY </h2>
+            </div>
+            <div data-aos="fade-right" className="flex flex-col items-center justify-center gap-4">
+              <img className="w-full rounded-full border-4 border-yellow-300" src={xehoa} />
+              <h2 className="text-lg font-bold hover:text-red-600"> XE HOA – TRANG TRÍ XE HOA </h2>
+            </div>
+            <div data-aos="fade-right" className="flex flex-col items-center justify-center gap-4">
+              <img className="w-full rounded-full border-4 border-yellow-300" src={bequa} />
+              <h2 className="text-lg font-bold hover:text-red-600"> BÊ QUẢ CƯỚI HỎI </h2>
+            </div>
+            <div data-aos="fade-right" className="flex flex-col items-center justify-center gap-4">
+              <img className="w-full rounded-full border-4 border-yellow-300" src={bangan} />
+              <h2 className="text-lg font-bold hover:text-red-600"> BACKGOUND – BÀN GALLERY </h2>
+            </div>
           </div>
-          <div data-aos="fade-right" className="flex flex-col items-center justify-center gap-4">
-            <img className="w-full rounded-full border-4 border-yellow-300" src={mamqua} />
-            <h2 className="text-xl font-bold hover:text-red-600"> MÂM QUẢ CƯỚI HỎI </h2>
+        </div>
+        <hr className="my-6 border-t border-gray-300 w-2/3 mx-auto" />
+        <div className="flex flex-col">
+          <h2 data-aos="fade-up" className="text-center text-3xl font-bold font-timesnewroman py-4">Dịch Vụ Thuê Đồ</h2>
+          <div className="grid w-11/12 mx-auto grid-cols-1 gap-5 px-10 sm:grid-cols-2 md:grid-cols-3 font-timesnewroman">
+            <div data-aos="fade-right" className="flex flex-col items-center justify-center gap-4">
+              <img className="w-full rounded-full border-4 border-yellow-300" src="/img/aodai.jpg" />
+              <h2 className="text-lg font-bold hover:text-red-600"> THUÊ ÁO DÀI </h2>
+            </div>
+            <div data-aos="fade-right" className="flex flex-col items-center justify-center gap-4">
+              <img className="w-full aspect-[16/11] object-cover rounded-full border-4 border-yellow-300" src="/img/dovannghe.jpg" />
+              <h2 className="text-lg font-bold hover:text-red-600"> THUÊ ĐỒ VĂN NGHỆ </h2>
+            </div>
+            <div data-aos="fade-right" className="flex flex-col items-center justify-center gap-4">
+              <img className="w-full aspect-[16/11] rounded-full border-4 border-yellow-300" src="/img/docungdinh.jpg" />
+              <h2 className="text-lg font-bold hover:text-red-600"> THUÊ ĐỒ CUNG ĐÌNH </h2>
+            </div>
           </div>
-          <div data-aos="fade-right" className="flex flex-col items-center justify-center gap-4">
-            <img className="w-full rounded-full border-4 border-yellow-300" src={levat} />
-            <h2 className="text-xl font-bold hover:text-red-600"> LỄ VẬT DẠM NGÕ </h2>
-          </div>
-          <div data-aos="fade-right" className="flex flex-col items-center justify-center gap-4">
-            <img className="w-full rounded-full border-4 border-yellow-300" src={conghoa} />
-            <h2 className="text-xl font-bold hover:text-red-600"> CỔNG HOA CƯỚI HỎI </h2>
-          </div>
-          <div data-aos="fade-right" className="flex flex-col items-center justify-center gap-4">
-            <img className="w-full rounded-full border-4 border-yellow-300" src={khungrap} />
-            <h2 className="text-xl font-bold hover:text-red-600"> KHUNG RẠP CƯỚI HỎI </h2>
-          </div>
-          <div data-aos="fade-right" className="flex flex-col items-center justify-center gap-4">
-            <img className="w-full rounded-full border-4 border-yellow-300" src={longphungtraicay} />
-            <h2 className="text-xl font-bold hover:text-red-600"> LONG PHỤNG – TRÁI CÂY </h2>
-          </div>
-          <div data-aos="fade-right" className="flex flex-col items-center justify-center gap-4">
-            <img className="w-full rounded-full border-4 border-yellow-300" src={xehoa} />
-            <h2 className="text-xl font-bold hover:text-red-600"> XE HOA – TRANG TRÍ XE HOA </h2>
-          </div>
-          <div data-aos="fade-right" className="flex flex-col items-center justify-center gap-4">
-            <img className="w-full rounded-full border-4 border-yellow-300" src={bequa} />
-            <h2 className="text-xl font-bold hover:text-red-600"> BÊ QUẢ CƯỚI HỎI </h2>
-          </div>
-          <div data-aos="fade-right" className="flex flex-col items-center justify-center gap-4">
-            <img className="w-full rounded-full border-4 border-yellow-300" src={bangan} />
-            <h2 className="text-xl font-bold hover:text-red-600"> BACKGOUND – BÀN GALLERY </h2>
+        </div>
+        <hr className="my-6 border-t border-gray-300 w-2/3 mx-auto" />
+        <div className="flex flex-col">
+          <h2 data-aos="fade-up" className="text-center text-3xl font-bold font-timesnewroman py-4">Dịch Vụ Chụp Hình</h2>
+          <div className="grid w-11/12 mx-auto grid-cols-1 gap-5 px-10 sm:grid-cols-2 md:grid-cols-3 font-timesnewroman">
+            <div data-aos="fade-right" className="flex flex-col items-center justify-center gap-4">
+              <img className="w-full aspect-[16/11] rounded-full border-4 border-yellow-300" src="/img/chuphinhgiadinh.jpg" />
+              <h2 className="text-lg font-bold hover:text-red-600"> CHỤP HÌNH GIA ĐÌNH </h2>
+            </div>
+            <div data-aos="fade-right" className="flex flex-col items-center justify-center gap-4">
+              <img className="w-full aspect-[16/11] rounded-full border-4 border-yellow-300" src="/img/chupkyyeu.jpg" />
+              <h2 className="text-lg font-bold hover:text-red-600"> CHỤP HÌNH KỶ YẾU </h2>
+            </div>
+            <div data-aos="fade-right" className="flex flex-col items-center justify-center gap-4">
+              <img className="w-full aspect-[16/11] rounded-full border-4 border-yellow-300" src="/img/chupanhconpect.jpg" />
+              <h2 className="text-lg font-bold hover:text-red-600"> CHỤP ẢNH CONCEPT  </h2>
+            </div>
           </div>
         </div>
       </div>

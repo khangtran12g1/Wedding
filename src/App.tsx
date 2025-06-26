@@ -6,6 +6,7 @@ import ProductDetail from "./User/pages/ProductDetail";
 import Introduce from "./User/pages/introduce";
 import ScrollToTop from "./User/components/ScrollToTop"; // hoặc đúng đường dẫn
 import LienHe from "./User/pages/LienHe";
+import ThuVienAnh from "./User/pages/ThuVienAnh";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="/GioiThieu" element={< Introduce/>} />
           <Route path="/home" element={< Home/>} />
           <Route path="/lien-he" element={<LienHe />} />
+          <Route path="/ThuVienAnh" element={<ThuVienAnh />} />
         </Routes>
       </Layout>
     </Router>

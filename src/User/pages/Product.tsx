@@ -5,6 +5,20 @@ import { FaCheckSquare } from "react-icons/fa";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { Editor } from "@tinymce/tinymce-react";
+import { CiViewList } from "react-icons/ci";
+import { FaChevronDown,FaChevronUp } from "react-icons/fa";
+
+const categories = [
+  { id: 1, name: 'Trang Trí Gia Tiên' },
+  { id: 2, name: 'Mâm Quả Trọn Gói' },
+  { id: 3, name: 'Lễ Vật Dạm Ngõ' },
+  { id: 4, name: 'Long Phụng Trái Cây' },
+  { id: 5, name: 'Cổng Hoa Cưới' },
+  { id: 6, name: 'Khung Rạp Cưới Hỏi' },
+  { id: 7, name: 'Xe Hoa - Trang Trí Xe Hoa' },
+  { id: 8, name: 'Bê Quả Cưới Hỏi' },
+  { id: 9, name: 'Thuê Váy Cưới' },
+];
 
 const moTaGoi = {
   1: "Đầy đủ nghi lễ, đúng chuẩn phong tục ông bà",
@@ -13,6 +27,7 @@ const moTaGoi = {
 };
 
 function TrangTriGt() {
+    const [selectedCategory, setSelectedCategory] = useState<number|null>(null);
     const [selected,setSelected] = useState(1);
 
     const handleSelect = (number : number) => {
@@ -23,18 +38,73 @@ function TrangTriGt() {
         AOS.init({ duration: 2000});
       }, []);
 
-    const editorRef = useRef<any>(null);
-    const [savedContent, setSavedContent] = useState("");
+      const [open, setOpen] = useState(false);
+      const [isSticky, setIsSticky] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+      if (scrollY >= 200) {
+        setIsSticky(true);
+      } else {
+        setIsSticky(false);
+      }
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+
+    // const editorRef = useRef<any>(null);
+    // const [savedContent, setSavedContent] = useState("");
     
-    const handleSave = () => {
-        if (editorRef.current) {
-          const content = editorRef.current.getContent();
-          setSavedContent(content);
-        }
-      };
+    // const handleSave = () => {
+    //     if (editorRef.current) {
+    //       const content = editorRef.current.getContent();
+    //       setSavedContent(content);
+    //     }
+    //   };
   
   return (
     <>
+    <div className="relative">
+        <div className={"fixed left-6 z-50 transition-all duration-300 " +(
+            isSticky ? "top-0" : "top-36")}
+        >
+          <button
+            onClick={() => setOpen(!open)}
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-gray-300 bg-white shadow-lg hover:shadow-xl transition"
+          >
+            <CiViewList size={24} />
+            <span className="text-sm font-medium text-gray-700">Bộ lọc</span>
+            {open ? <FaChevronUp /> : <FaChevronDown />}
+          </button>
+        </div>
+
+        {open && (
+          <div className={"fixed left-40 z-50 transition-all animate-fade-in-up bg-white border border-gray-200 rounded-2xl shadow-lg p-5 "
+                +( isSticky ? "top-[10px]" : "top-36" )}
+          >
+            <p className="font-semibold text-gray-700 mb-3">💐 Lọc dịch vụ:</p>
+            <div className="space-y-2 text-sm text-gray-700">
+              {categories.map((item, idx) => (
+                <label key={idx} className="flex items-center gap-2">
+                  <input
+                    type="radio"
+                    name="category"
+                    value={item.id}
+                    className="accent-pink-500 w-4 h-4 rounded-sm"
+                    onChange={() => setSelectedCategory(item.id)}
+                  />
+                  {item.name}
+                </label>
+              ))}
+            </div>
+
+          </div>
+        )}
+      </div>
+
     <div className=" hidden lg:flex flex-col font-timesnewroman gap-10 py-8 bg-[#edf8fb]">
             <h2 data-aos="fade-up" className="font-bold text-2xl font-timesnewroman text-center">TRANG TRÍ GIANG TIÊN</h2>
             <p data-aos="fade-up" className="text-center text-lg">Hiểu lần đầu là bỡ ngỡ, Cưới hỏi Phu Thê sẽ sát cánh cùng bạn làm nên lần đầu thật trọn vẹn</p>
@@ -43,6 +113,7 @@ function TrangTriGt() {
                 <img data-aos="fade-right" src={sss} className="w-full"/>
             </div>
     </div>
+
       <h4 className="my-6 text-center text-xl font-bold text-red-500">
         Trang Trí Gia Tiên Đẹp Chuẩn Lễ – Sang Trọng, Tinh Tế Từng Góc Nhìn
       </h4>
